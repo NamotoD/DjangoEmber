@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/books', include('books.api.urls',
-                              namespace='api-books'))
+    url(r'^api/books/?', include('books.api.urls', namespace='api-books')),
 ]
